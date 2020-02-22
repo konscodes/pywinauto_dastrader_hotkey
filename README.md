@@ -34,6 +34,7 @@ How to use:
 3. Profit ;) the correct order should be placed
 
 Change log:
+
 v0.7
 - Added the ability to assign different hotkey sets through subfunction
 - Removed debug and testing code to speedup the execution
