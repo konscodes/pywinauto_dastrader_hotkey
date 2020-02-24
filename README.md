@@ -1,7 +1,7 @@
 # pywinauto_dastrader_hotkey
 GUI automation script for DAS trader
 
-Idea:
+Idea: 
 Calculate stop distance based on current position size and set dollar risk
 
 Idealy should be done by the following DAS hotkey (Long):
