@@ -1,16 +1,16 @@
 # pywinauto_dastrader_hotkey
 GUI automation script for DAS trader
 
-Idea: 
+Idea: <br>
 Calculate stop distance based on current position size and set dollar risk
 
-Idealy should be done by the following DAS hotkey (Long):
+Idealy should be done by the following DAS hotkey (Long):<br>
 Route=Stop;Share=Pos;StopPrice=50/Pos;StopPrice=AvgCost-StopPrice;StopType=MARKET;TIF=DAY;SELL=Send;
 
-Problem:
+Problem:<br>
 DAS scripting language doesnt support Risk/Position opperation; moreover DAS API is 100$ per month
 
-Solution:
+Solution:<br>
 Read montage controls with python library for GUI automation pywinauto. Perform calculation in python and return desired value of StopDistance. Put the value back into montage and send the order using DAS hotkey.
 
 Notes:
@@ -18,16 +18,16 @@ Notes:
 - the montage window should be active
 - two hotkeys are defined within a script; one for activating the python part; another for passing into DAS
 
-Requirements:
-Pythin 3.8.0
-Pywinauto 0.6.8
-Pynput 1.6.7
+Requirements:<br>
+Pythin 3.8.0<br>
+Pywinauto 0.6.8<br>
+Pynput 1.6.7<br>
 
 Preparation:
 - Download working working_das_stop script and install all the requirements above
 - Set first key combination in python to start the script (StopUpdateHotkey in following example)
-- Add the below hotkey to DAS
-Long: Route=Stop;StopPrice=AvgCost-Price;StopType=MARKET;TIF=DAY;SELL=Send;Route=Limit; 
+- Add the below hotkey to DAS<br>
+Long: Route=Stop;StopPrice=AvgCost-Price;StopType=MARKET;TIF=DAY;SELL=Send;Route=Limit; <br>
 Short: Route=Stop;StopPrice=AvgCost+Price;StopType=MARKET;TIF=DAY;BUY=Send;Route=Limit;
 - Set second key combination in python to pass into your DAS (DasStopUpdateShort and DasStopUpdateLong in following example)
 - Set your dollar risk in python script (SetRisk variale)
@@ -39,7 +39,7 @@ How to use:
 3. Profit ;) the correct order should be placed
 
 
-Change log:
+Change log:<br>
 v0.7
 Added the ability to assign different hotkey sets through subfunction
 Removed debug and testing code to speedup the execution
