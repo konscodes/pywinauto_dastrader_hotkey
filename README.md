@@ -40,6 +40,9 @@ How to use:
 
 
 Change log:<br>
+v0.8
+Genaral script improvements
+
 v0.7
 Added the ability to assign different hotkey sets through subfunction
 Removed debug and testing code to speedup the execution
